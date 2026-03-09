@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Github Issues Traker</title>
+    <link rel="shortcut icon" href="B13-A5-Github-Issue-Tracker/assets/github-logo.png" type="image/x-icon">
+<!-- css file -->
+    <link rel="stylesheet" href="css/main.css">
+<!-- dasiui and tailwind -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<!-- google fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <header>
+    <div class="navbar bg-base-100 shadow-sm">
+      <div class="flex-1 ml-5">
+         <a class="flex items-center gap-2 text-xl">
+           <img src="B13-A5-Github-Issue-Tracker/assets/github-logo.png" class="w-8" alt="">
+           <h2 class="font-semibold">GitHub Issues Tracker</h2>
+         </a>
+      </div>
+      <div class="flex gap-4 mr-5">
+        <input type="text" id="search-bar" placeholder="scarch issues..." class="input input-bordered w-24 md:w-auto" />
+         <div class="dropdown dropdown-end">
+          <button class="btn btn-primary"><i class="fa-solid fa-plus"></i>New Issue</button>
+         </div>
+      </div>
+     </div>
+    </header>
+
+    <section class="btn-section w-11/12 mx-auto mt-8 py-4 pl-5 shadow-sm rounded-xl bg-white">
+        <button id="all-btn" class="btn mr-2 active">All</button>
+        <button id="open-btn" class="btn mr-2">Open</button>
+        <button id="close-btn" class="btn">Closed</button>
+    </section>
+
+    <section class="issue-summary w-11/12 mx-auto mt-5">
+        <div class="summary-left">
+            <div class="summary-icon-box">
+                <img src="B13-A5-Github-Issue-Tracker/assets/Aperture.png" alt="" class="summary-icon">
+            </div>
+
+            <div>
+                <h2 id="issue-count-text" class="summary-title">0 Issues</h2>
+                <p class="summary-subtitle">Track and manage your project issues</p>
+            </div>
+        </div>
+
+        <div class="summary-right">
+            <div class="legend-item">
+                <span class="legend-dot open-dot"></span>
+                <span>Open</span>
+            </div>
+
+            <div class="legend-item">
+                <span class="legend-dot closed-dot">
+
+                </span>
+                <span>Closed</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="issues-conteiner" 
+    class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5 p-5 w-11/12 mx-auto">
+    </section>
+
+    <div id="issue-model" class="model">
+        <div class="model-content">
+            <button id="close-model" class="close-btn">Close</button>
+
+            <h2 id="model-title" class="modal-title"></h2>
+
+            <div class="modal-meta-row">
+                <span id="model-status-badge" class="modal-status-badge">Opened</span>
+                <span id="model-author" class="modal-meta-text"></span>
+                <span class="modal-dot">•</span>
+                <span id="model-date" class="modal-meta-text"></span>
+            </div>
+
+            <div class="modal-labels">
+                <span class="modal-label bug-fill">
+                BUG
+                </span>
+
+                <span class="modal-label help-fill">
+                    
+                HELP WANTED
+                </span>
+            </div>
+
+            <p id="model-des" class="modal-description"></p>
+
+            <div class="modal-info-box">
+                <div class="info-item">
+                    <p class="info-label">Assignee:</p>
+                    <h4 id="model-assignee"></h4>
+                </div>
+
+                <div class="info-item">
+                    <p class="info-label">Priority:</p>
+                    <span id="model-priority" class="priority-pill"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
