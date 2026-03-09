@@ -12,7 +12,7 @@ document.getElementById("sing-btn").addEventListener('click',function(){
 
     if(username == 'admin' && password == 'admin123'){
         alert('sing in sucessful')
-        window.location.assign('/main.html')
+        window.location.assign("home.html")
     }else{
         alert('pleaze try again')
     }
