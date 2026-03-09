@@ -14,6 +14,6 @@ document.getElementById("sing-btn").addEventListener('click',function(){
         alert('sing in sucessful')
         window.location.assign("home.html")
     }else{
-        alert('pleaze try again')
+        alert('please try again')
     }
 })
